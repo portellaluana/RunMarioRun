@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.game {
+  background-image: url(./assets/background-pixel.svg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: top center;
+  background-size: contain;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  z-index: 1;
+}
+
+.menu-game {
+  text-align: center;
+}
+
+.logo-game img {
+  display: inline;
+  width: 600px;
+  margin-top: 160px;
+}
+
+/* .heart-game {
+  display: flex;
+  margin-top: 16px;
+  margin-left: 16px;
+}
+
+.heart-game img {
+  display: none;
+  width: 40px;
+  margin-right: 16px;
+} */
+
+button {
+  color: white;
+  border: none;
+  background: none;
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 32px;
+}
+
+button span {
+  color: transparent;
+  border: none;
+  background: none;
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 32px;
+}
+
+button:hover span {
+  color: red;
+  border: none;
+  background: none;
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 32px;
+}
+
+.footer-game {
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+  margin-left: -56px;
+}
+
+.bomb-game {
+  display: none;
+  position: absolute;
+  bottom: 80px;
+  width: 120px;
+
+  animation: bomb-animation 1.5s infinite linear;
+}
+
+.super-mario {
+  width: 150px;
+  position: absolute;
+  bottom: 80px;
+  margin-left: 4%;
+  margin-right: 96%;
+}
+
+.cloud-game {
+  float: right;
+  display: flex;
+  position: absolute;
+  width: 350px;
+  margin-top: 24px;
+
+  animation: clouds-animation 20s infinite linear;
+}
+
+.jump-mario {
+  animation: mario-animation 500ms ease-out;
+}
+
+@keyframes bomb-animation {
+  from {
+    right: -120px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes clouds-animation {
+  from {
+    right: -350px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes mario-animation {
+  0% {
+    bottom: 100px;
+  }
+  40% {
+    bottom: 280px;
+  }
+  50% {
+    bottom: 280px;
+  }
+  60% {
+    bottom: 280px;
+  }
+  70% {
+    bottom: 280px;
+  }
+  100% {
+    bottom: 100px;
+  }
+}
