@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-* {
-  box-sizing: border-box;
-}
-
-.game {
+body {
   background-image: url(./assets/background-pixel.svg);
   min-height: 100vh;
   background-size: cover;
@@ -14,31 +10,74 @@
   position: relative;
   width: 100%;
   justify-content: center;
-  display: flex;
-  z-index: 1;
+  z-index: -1;
 }
 
-.menu-game {
-  text-align: center;
-}
-
-.logo-game img {
-  display: inline;
-  width: 600px;
-  margin-top: 160px;
-}
-
-/* .heart-game {
-  display: flex;
+.cabecalho {
+  justify-content: space-between;
   margin-top: 16px;
+  margin-right: 16px;
   margin-left: 16px;
+  opacity: 0%;
+  z-index: 10;
 }
 
-.heart-game img {
-  display: none;
-  width: 40px;
+header div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  margin-top: 16px;
+}
+
+header h1 {
+  color: white;
+  border: none;
+  background: none;
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
+  margin-left: 16px;
   margin-right: 16px;
-} */
+}
+
+header img {
+  width: 40px;
+}
+
+nav {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+nav h1 {
+  display: none;
+  color: white;
+  border: none;
+  background: none;
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 200px;
+}
+
+nav #game-over {
+  display: none;
+  color: white;
+  border: none;
+  background: none;
+  font-family: "Press Start 2P", cursive;
+  font-size: 40px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+nav img {
+  width: 410px;
+  margin-top: 80px;
+}
 
 button {
   color: white;
@@ -70,23 +109,58 @@ button:hover span {
   margin-top: 32px;
 }
 
-.footer-game {
+nav .btn-new-game {
+  display: none;
+}
+
+nav .btn-start {
+  display: block;
+}
+
+nav .btn-continue {
+  display: none;
+}
+
+footer #floor figure {
+  width: 220%;
+
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
+}
+
+#floor-game {
+  background-image: url(./assets/alone-footer.svg);
+  background-repeat: repeat-x;
   height: 80px;
-  margin-left: -56px;
+
+  animation: floor-animation 10s infinite linear;
+}
+
+.cloud-game {
+  display: flex;
+  position: absolute;
+  width: 350px;
+  margin-top: 110px;
+  z-index: -1;
+
+  animation: clouds-animation 30s infinite linear;
+}
+
+.jump-mario {
+  animation: mario-animation 500ms ease-out;
 }
 
 .bomb-game {
   display: none;
   position: absolute;
   bottom: 80px;
-  width: 120px;
+  width: 100px;
 
-  animation: bomb-animation 1.5s infinite linear;
+  animation: bomb-animation 2s infinite linear;
 }
 
 .super-mario {
+  display: flex;
   width: 150px;
   position: absolute;
   bottom: 80px;
@@ -94,18 +168,13 @@ button:hover span {
   margin-right: 96%;
 }
 
-.cloud-game {
-  float: right;
-  display: flex;
+.moeda-mario {
+  display: none;
   position: absolute;
-  width: 350px;
-  margin-top: 24px;
+  bottom: 300px;
+  width: 40px;
 
-  animation: clouds-animation 20s infinite linear;
-}
-
-.jump-mario {
-  animation: mario-animation 500ms ease-out;
+  animation: coin-animation 3s infinite linear;
 }
 
 @keyframes bomb-animation {
@@ -114,6 +183,24 @@ button:hover span {
   }
   to {
     right: 100%;
+  }
+}
+
+@keyframes coin-animation {
+  from {
+    right: -120px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes floor-animation {
+  from {
+    right: -110%;
+  }
+  to {
+    right: 0%;
   }
 }
 
