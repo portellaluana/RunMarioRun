@@ -22,7 +22,7 @@ const valorVida = 1;
 const moeda = document.querySelector(".moeda-mario");
 const contagemMoeda = document.querySelector(".coins-h1");
 let totalMoedas = 0;
-contagemMoeda.innerHTML = "000";
+contagemMoeda.innerHTML = "00";
 const valorMoeda = 10;
 
 function jump() {
