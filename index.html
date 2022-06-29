@@ -10,28 +10,51 @@
     <title>MarioGame</title>
 </head>
 
-<body>
-
-    <div class="game">
-        <div class="menu-game">
-            <div class="logo-game">
-                <img src="./assets/logo-supermario.png" alt="">
-            </div>
-            <div class="btn-menu">
-                <div>
-                    <button class="btn-start"><span>➤</span> start</button>
-                </div>
-                <!-- <div>
-                    <button class="btn-continue"><span>➤</span> continue</button>
-                </div> -->
-            </div>
-        </div>
-
+<body id="body">
+    <figure>
         <img src="./assets/clouds-gamer.png" class="cloud-game" alt="">
+    </figure>
+
+    <header>
+        <section class="cabecalho">
+            <div class="life">
+                <img src="./assets/life.svg" alt="">
+                <h1 class="life-h1"></h1>
+            </div>
+
+            <div class="coins">
+                <img src="./assets/coin.svg" alt="moeda-mario">
+                <h1 class="coins-h1"></h1>
+            </div>
+        </section>
+    </header>
+
+    <nav>
+        <img src="./assets/logo-supermario.png" class="logo-mario" alt="">
+
+        <h2 class="game-over" id="game-over">Game Over</h2>
+
+        <button class="btn-continue"><span>➤</span> Continue</button>
+
+        <button class="btn-new-game"><span>➤</span> New Game</button>
+
+        <button class="btn-start"><span>➤</span> Start</button>
+    </nav>
+
+    <main>
+        <img src="./assets/coin.svg" class="moeda-mario" alt="">
         <img class="super-mario" alt="">
+    </main>
+
+    <footer>
         <img src="./assets/bomb-game.png" class="bomb-game" alt="">
-        <img src="./assets/footer.svg" class="footer-game" alt="">
-    </div>
+
+        <div id="floor">
+            <figure id="floor-game">
+                <img alt="">
+            </figure>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
